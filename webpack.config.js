@@ -94,17 +94,13 @@ module.exports = {
         }),
         new webpack.HotModuleReplacementPlugin(),
     ],
+    stats: {
+        children: true
+    },
     module: {
         rules: [
-            // {
-            //     test: /\.css$/i,
-            //     use: [
-            //         MiniCssExtractPlugin.loader,
-            //         "css-loader",
-            //     ],
-            // },
             {
-                test: /\.styl$/,
+                test: /\.(sass|styl|css)$/,
                 use: [
                     MiniCssExtractPlugin.loader,
                     "css-loader",
@@ -116,14 +112,14 @@ module.exports = {
                 exclude: /node_modules/,
                 use: jsLoaders()
             },
-            // {
-            //     test: /\.(woff(2)?|eot|ttf|otf|svg|)$/,
-            //     type: "asset/inline",
-            // },
-            // {
-            //     test: /\.(?:ico|gif|png|jpe?g)$/i,
-            //     type: "asset/resource",
-            // },
+            {
+                test: /\.(woff(2)?|eot|ttf|otf|svg|)$/,
+                type: "asset/inline",
+            },
+            {
+                test: /\.(?:ico|gif|png|jpe?g)$/i,
+                type: "asset/resource",
+            },
         ],
     },
 };

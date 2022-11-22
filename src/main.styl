@@ -5,7 +5,7 @@
   margin 0
   box-sizing border-box
 .main_wrapper
-  width 1920px
+  //width 1920px
   border 1px dashed red
 .header_container_top_box_1_contact
   width 500px
@@ -190,18 +190,10 @@ strong
   color #2B2B2B
   padding-left 3px
 .header_container_bottom_1
-  position absolute
-  top 152px
-  left 0
-  width 1920px
+  width 1725px
   height 56px
-  //border 1px solid black
+  border 1px solid black
   background  #F5F5F5
-  &_sub
-    width 1725px
-    height 56px
-    //border 1px solid green
-    margin 0 auto
 .header_container_bottom_2
     display flex
     justify-content space-between
@@ -281,9 +273,14 @@ strong
 
 .section_2
   width 100%
-  height 2708px
+  //height 2708px
   //border 1px solid black
   display flex
+  justify-content center
+  &_container
+    width 1725px
+    //border 1px solid black
+    display flex
   &_sidebar
     width 425px
     height 1560px
@@ -294,7 +291,6 @@ strong
       width 282px
       height inherit
       //border 1px solid black
-      margin-left 50px
       &_box_1
         width inherit
         height 161px
@@ -435,19 +431,31 @@ strong
   align-items center
   justify-content space-between
   margin-top 10px
+  color #2B2B2B
+  font-family 'Nunito Sans', sans-serif
+  font-weight 400
+  font-size 14px
+  line-height 19px
+  letter-spacing 0.03em
   &>label
     display flex
-    justify-content flex-start
-    width 125px
-    //border 1px solid black
-    &>p
-      margin-left 14px
-      color #2B2B2B
-      font-family 'Nunito Sans', sans-serif
-      font-weight 400
-      font-size 14px
-      line-height 19px
-      letter-spacing 0.03em
+    width 200px
+    margin-left 30px
+
+    &>input
+      -webkit-appearance none
+      -moz-appearance none
+      appearance none
+      position absolute
+
+    &>span    // кастомный чекбоск
+      position absolute
+      width 23px
+      height 23px
+      border 1px solid #CECECE
+      background-image url("./img/check_box_1.png")
+      margin-left -30px
+
   &>p
     text-decoration none
     color #959595
@@ -536,7 +544,7 @@ strong
 
 .section_2_sidebar_container_box_5
   width inherit
-  height 312px
+  height 365px
   border-bottom 1px solid #CECECE
   &_color_h1
     width inherit
@@ -553,49 +561,27 @@ strong
       letter-spacing 0.03em
     &>p
       color #C4C4C4
-    &_a
-      width 108px
+    &_d
+      width 120px
       height 39px
-      background #F5F5F5
+      display flex
+      align-items center
+      margin-bottom 12px
       border-radius 28px
-      display flex
-      align-items center
-      &>p
+      &>a
         margin-left 6px
+        text-decoration none
+        font-family 'Nunito Sans', sans-serif
         color #2B2B2B
-        font-family 'Nunito Sans', sans-serif
         font-weight 400
         font-size 14px
         line-height 19px
         letter-spacing 0.03em
-    &_b
-      width 108px
-      height 39px
-      display flex
-      align-items center
-      &>p
-        margin-left 6px
-        color #2B2B2B
-        font-family 'Nunito Sans', sans-serif
-        font-weight 400
-        font-size 14px
-        line-height 19px
-        letter-spacing 0.03em
-    &_beige
-      width 126px
-      height 39px
-      border-radius 28px
-      background #F5F5F5
-      display flex
-      align-items center
-      &>span
-        margin-left 6px
-        font-family 'Nunito Sans', sans-serif
-        font-weight 400
-        font-size 14px
-        line-height 19px
-        letter-spacing 0.03em
+      &>a:hover
         color #2C75FF
+    &_d:hover
+      background #F5F5F5
+
 .rectangle_white
   width 25px
   height 25px
@@ -683,7 +669,7 @@ strong
 
 .section_2_content
   width 1351px
-  height 2932px
+  //height 2932px
   //border 1px solid black
   margin-left 44px
   &_box_1
@@ -793,8 +779,6 @@ strong
       line-height 18px
       letter-spacing 0.03em
       text-decoration none
-      &>p
-        margin-left 5px
       &>img
         margin-left 3px
         margin-top -3px
@@ -1095,8 +1079,9 @@ strong
 
   &_box_9
     width inherit
-    height 510px
+    height 317px
     //border 1px solid black
+    margin-top 81px
     &>h2
       font-family 'Nunito Sans', sans-serif
       font-weight 700
@@ -1104,7 +1089,6 @@ strong
       line-height 27px
       letter-spacing 0.03em
       color #2B2B2B
-      margin-top 81px
       margin-bottom 25px
     &>p
       width 878px
@@ -1120,3 +1104,4 @@ strong
   width 100%
   height 498px
   border 1px solid black
+  margin-top 112px
