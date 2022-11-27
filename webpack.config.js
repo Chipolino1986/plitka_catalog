@@ -24,7 +24,8 @@ module.exports = {
     output: {
         filename: filename("js"),
         path: path.resolve(__dirname, "dist"),
-        publicPath: "/"
+        publicPath: "/",
+        assetModuleFilename: "assets/[hash][ext]"
     },
     resolve: {
         modules: ["node_modules", path.resolve(__dirname, "src")],
@@ -40,7 +41,10 @@ module.exports = {
         hot: true,
         open: true,
         progress: true,
-        writeToDisk: true,
+        // writeToDisk: true,
+        writeToDisk: (filePath) => {
+            return !/hot-update/i.test(filePath);
+        },
         compress: true,
         historyApiFallback: true,
         contentBase: path.resolve(__dirname, "dist"),
@@ -48,11 +52,12 @@ module.exports = {
     plugins: [
         new CleanWebpackPlugin(),
         new HTMLWebpackPlugin({
-            template: "index.html",
+            template: path.resolve(__dirname, "src/index.html"),
             filename: "index.html",
             hash: isProd,
             inject: true,
             scriptLoading: "defer",
+            publicPath: "auto",
             minify: {
                 removeComments: isProd,
                 collapseWhitespace: isProd,
@@ -70,22 +75,22 @@ module.exports = {
                 removeScriptTypeAttributes: isProd,
             }
         }),
-        new CopyPlugin({
-            patterns: [
-                {
-                    from: path.resolve(__dirname, "src/fonts"),
-                    to: path.resolve(__dirname, "dist/fonts")
-                },
-                {
-                    from: path.resolve(__dirname, "src/img"),
-                    to: path.resolve(__dirname, "dist/img")
-                },
-                // {
-                //     from: path.resolve(__dirname, "src/favicon.ico"),
-                //     to: path.resolve(__dirname, "dist")
-                // },
-            ]
-        }),
+        // new CopyPlugin({
+        //     patterns: [
+        //         {
+        //             from: path.resolve(__dirname, "src/fonts"),
+        //             to: path.resolve(__dirname, "dist/fonts")
+        //         },
+        //         {
+        //             from: path.resolve(__dirname, "src/img"),
+        //             to: path.resolve(__dirname, "dist/img")
+        //         },
+        //         {
+        //             from: path.resolve(__dirname, "src/favicon.ico"),
+        //             to: path.resolve(__dirname, "dist")
+        //         },
+        //     ]
+        // }),
         new MiniCssExtractPlugin({
             filename: filename("css")
         }),
@@ -99,6 +104,10 @@ module.exports = {
     },
     module: {
         rules: [
+            {
+                test: /\.html$/,
+                loader: "html-loader"
+            },
             {
                 test: /\.(sass|styl|css)$/,
                 use: [

@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Test_site</title>
+<!--    <link rel="stylesheet" href="normalize.css.css">-->
 </head>
 <body>
     <main class="main_wrapper">
@@ -29,7 +30,35 @@
                                     <a href="#">+7 999 888  65 55</a>
                                 </div>
                                 <div class="header_container_top_box_1_contact_box_2_tel_d">
-                                    <a href="#">Написать директору</a>
+
+                                    <div class="popUp_wrapper">
+                                        <a href="#" class="open_pop_up">Написать директору</a>
+
+                                        <div id="pop_up" class="pop_up">
+                                            <!--<a href="#" class="popup_close_area"></a>-->
+                                            <div class="pop_up_container">
+                                                <div class="pop_up_body">
+                                                    <a href="#" id="pop_up_close" class="pop_up_close">&#10006;</a>
+                                                    <div class="popup_title">Мы будем рады вашим вопросам и предложениям</div>
+                                                    <div class="content">
+                                                        <label>
+                                                            <input class="content_name" placeholder="Name *" type="text" required>
+                                                        </label>
+                                                        <label>
+                                                            <input class="content_tel" placeholder="Telephone" type="tel">
+                                                        </label>
+                                                        <label>
+                                                            <input class="content_mail" placeholder="E-mail *" type="email" required>
+                                                        </label>
+                                                        <label>
+                                                            <textarea class="content_description" placeholder="Message *" required></textarea>
+                                                        </label>
+                                                        <input type="submit" class="send_director" value="Отправить">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                             <div class="header_container_top_box_1_contact_box_3">
@@ -67,7 +96,39 @@
                 </div>
 
                 <div class="header_container_bottom_1">
-
+                    <div class="header_container_bottom_1_allBrands">
+                        <a href="#">Все бренды
+                            <img src="img/Cros.png">
+                        </a>
+                        <a href="#">0-9</a>
+                    </div>
+                    <div class="header_container_bottom_1_alphabet">
+                        <a href="#">A</a>
+                        <a href="#">B</a>
+                        <a href="#">C</a>
+                        <a href="#">D</a>
+                        <a href="#">E</a>
+                        <a href="#">F</a>
+                        <a href="#">G</a>
+                        <a href="#">I</a>
+                        <a href="#">J</a>
+                        <a href="#">K</a>
+                        <a href="#">L</a>
+                        <a href="#">M</a>
+                        <a href="#">N</a>
+                        <a href="#">O</a>
+                        <a href="#">P</a>
+                        <a href="#">Q</a>
+                        <a href="#">R</a>
+                        <a href="#">S</a>
+                        <a href="#">T</a>
+                        <a href="#">U</a>
+                        <a href="#">V</a>
+                        <a href="#">W</a>
+                        <a href="#">X</a>
+                        <a href="#">Z</a>
+                    </div>
+                    <a href="#">A-Я</a>
                 </div>
 
                 <div class="header_container_bottom_2">
@@ -150,37 +211,33 @@
                                 <a href="#">&#10006</a>
                             </div>
                             <div class="section_2_sidebar_container_box_3_check">
-                                <label>
-                                    <input type="checkbox">
-
-                                    <span></span>
+                                <label class="check">
+                                    <input type="checkbox" class="check_input">
+                                    <span class="check_box"></span>
                                     Для ванной
                                 </label>
                                 <p>12</p>
                             </div>
                             <div class="section_2_sidebar_container_box_3_check">
-                                <label>
-                                    <input type="checkbox">
-
-                                    <span></span>
+                                <label class="check">
+                                    <input type="checkbox" class="check_input">
+                                    <span class="check_box"></span>
                                     Для кухни
                                 </label>
                                 <p>34</p>
                             </div>
                             <div class="section_2_sidebar_container_box_3_check">
-                                <label>
-                                    <input type="checkbox">
-
-                                    <span></span>
+                                <label class="check">
+                                    <input type="checkbox" class="check_input">
+                                    <span class="check_box"></span>
                                     Для туалета
                                 </label>
                                 <p>112</p>
                             </div>
                             <div class="section_2_sidebar_container_box_3_check">
-                                <label>
-                                    <input type="checkbox">
-
-                                    <span></span>
+                                <label class="check">
+                                    <input type="checkbox" class="check_input">
+                                    <span class="check_box"></span>
                                     Для фартука
                                 </label>
                                 <p>34</p>
@@ -341,6 +398,7 @@
                         </div>
                     </div>
                     <div class="section_2_content_box_5">
+
                         <div class="section_2_content_box_5_card">
                             <div class="section_2_content_box_5_card_dom_1">
                                 <div class="section_2_content_box_5_card_dom_1_a">
@@ -355,17 +413,17 @@
                             </div>
                             <div class="section_2_content_box_5_card_dom_2_border">
                                 <div class="section_2_content_box_5_card_dom_2">
-                                <img src="img/image_1.png" alt="img-1">
-                            </div>
+                                    <img src="img/image_1.png" alt="img-1">
+                                </div>
                                 <div class="section_2_content_box_5_card_dom_3">
-                                <a href="#">
+                                    <a href="#">
                                     <img src="img/arrow_down.png" alt="arrow">
                                     Есть образцы в салоне
                                 </a>
-                            </div>
+                                </div>
                                 <div class="section_2_content_box_5_card_dom_4">
-                                <p>Коллекция EQUIPE VILLAGE</p>
-                            </div>
+                                    <p>Коллекция EQUIPE VILLAGE</p>
+                                </div>
                                 <div class="section_2_content_box_5_card_dom_5">
                                 <div class="section_2_content_box_5_card_dom_5_stile">
                                     <p>Страна:&nbsp;<span>Испания</span></p>
@@ -387,358 +445,8 @@
                             </div>
                         </div>
 
-                            <div class="section_2_content_box_5_card">
-                            <div class="section_2_content_box_5_card_dom_1">
-                                <div class="section_2_content_box_5_card_dom_1_a">
-                                    <p>-20%</p>
-                                </div>
-                                <div class="section_2_content_box_5_card_dom_1_b">
-                                    <p>Новинка</p>
-                                </div>
-                            </div>
-                            <div class="section_2_content_box_5_card_dom_2_border">
-                                <div class="section_2_content_box_5_card_dom_2">
-                                <img src="img/image_2.png" alt="img-1">
-                                </div>
-                                <div class="section_2_content_box_5_card_dom_3">
-                                <a href="#">
-                                    <img src="img/arrow_down.png" alt="arrow">
-                                    Есть образцы в салоне
-                                </a>
-                                </div>
-                                <div class="section_2_content_box_5_card_dom_4">
-                                    <p>Коллекция EQUIPE VILLAGE</p>
-                                </div>
-                                <div class="section_2_content_box_5_card_dom_5">
-                                    <div class="section_2_content_box_5_card_dom_5_stile">
-                                        <p>Страна:&nbsp;<span>Испания</span></p>
-                                        <p>Стиль:&nbsp;<span>Современный</span></p>
-                                    </div>
-                                    <div class="section_2_content_box_5_card_dom_5_medal">
-                                        <img src="img/medal-1.png" alt="medal-1">
-                                        <img src="img/medal-2.png" alt="medal-2">
-                                    </div>
-                                </div>
-                                <div class="section_2_content_box_5_card_dom_6">
-                                    <div class="section_2_content_box_5_card_dom_6_a">
-                                        <p>Цена от:&nbsp;<span>20 150 руб./м²</span></p>
-                                    </div>
-                                    <a href="#" class="section_2_content_box_5_card_dom_6_b">
-                                        В избранное<img src="img/heart-blue.png" alt="heart">
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-
-                            <div class="section_2_content_box_5_card">
-                            <div class="section_2_content_box_5_card_dom_1">
-                                <div class="section_2_content_box_5_card_dom_1_a">
-                                    <p>-20%</p>
-                                </div>
-                                <div class="section_2_content_box_5_card_dom_1_b">
-                                    <p>Новинка</p>
-                                </div>
-                            </div>
-                            <div class="section_2_content_box_5_card_dom_2_border">
-                                <div class="section_2_content_box_5_card_dom_2">
-                                    <img src="img/image_3.png" alt="img-1">
-                                </div>
-                                <div class="section_2_content_box_5_card_dom_3">
-                                    <a href="#">
-                                        <img src="img/arrow_down.png" alt="arrow">
-                                        Есть образцы в салоне
-                                    </a>
-                                </div>
-                                <div class="section_2_content_box_5_card_dom_4">
-                                    <p>Коллекция EQUIPE VILLAGE</p>
-                                </div>
-                                <div class="section_2_content_box_5_card_dom_5">
-                                    <div class="section_2_content_box_5_card_dom_5_stile">
-                                        <p>Страна:&nbsp;<span>Испания</span></p>
-                                        <p>Стиль:&nbsp;<span>Современный</span></p>
-                                    </div>
-                                    <div class="section_2_content_box_5_card_dom_5_medal">
-                                        <img src="img/medal-1.png" alt="medal-1">
-                                        <img src="img/medal-2.png" alt="medal-2">
-                                    </div>
-                                </div>
-                                <div class="section_2_content_box_5_card_dom_6">
-                                    <div class="section_2_content_box_5_card_dom_6_a">
-                                        <p>Цена от:&nbsp;<span>20 150 руб./м²</span></p>
-                                    </div>
-                                    <a href="#" class="section_2_content_box_5_card_dom_6_b">
-                                        В избранное<img src="img/heart-blue.png" alt="heart">
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
                     </div>
-                    <div class="section_2_content_box_5">
-                        <div class="section_2_content_box_5_card">
-                            <div class="section_2_content_box_5_card_dom_1">
-                                <div class="section_2_content_box_5_card_dom_1_a">
-                                    <p>-20%</p>
-                                </div>
-                                <div class="section_2_content_box_5_card_dom_1_b">
-                                    <p>Новинка</p>
-                                </div>
-                                <div class="section_2_content_box_5_card_dom_1_c">
-                                    <p>Хит!</p>
-                                </div>
-                            </div>
-                            <div class="section_2_content_box_5_card_dom_2_border">
-                                <div class="section_2_content_box_5_card_dom_2">
-                                <img src="img/image_1.png" alt="img-1">
-                            </div>
-                                <div class="section_2_content_box_5_card_dom_3">
-                                <a href="#">
-                                    <img src="img/arrow_down.png" alt="arrow">
-                                    Есть образцы в салоне
-                                </a>
-                            </div>
-                                <div class="section_2_content_box_5_card_dom_4">
-                                <p>Коллекция EQUIPE VILLAGE</p>
-                            </div>
-                                <div class="section_2_content_box_5_card_dom_5">
-                                <div class="section_2_content_box_5_card_dom_5_stile">
-                                    <p>Страна:&nbsp;<span>Испания</span></p>
-                                    <p>Стиль:&nbsp;<span>Современный</span></p>
-                                </div>
-                                <div class="section_2_content_box_5_card_dom_5_medal">
-                                    <img src="img/medal-1.png" alt="medal-1">
-                                    <img src="img/medal-2.png" alt="medal-2">
-                                </div>
-                            </div>
-                                <div class="section_2_content_box_5_card_dom_6">
-                                <div class="section_2_content_box_5_card_dom_6_a">
-                                    <p>Цена от:&nbsp;<span>20 150 руб./м²</span></p>
-                                </div>
-                                <a href="#" class="section_2_content_box_5_card_dom_6_b">
-                                    В избранное<img src="img/heart-blue.png" alt="heart">
-                                </a>
-                            </div>
-                            </div>
-                        </div>
 
-                            <div class="section_2_content_box_5_card">
-                            <div class="section_2_content_box_5_card_dom_1">
-                                <div class="section_2_content_box_5_card_dom_1_a">
-                                    <p>-20%</p>
-                                </div>
-                                <div class="section_2_content_box_5_card_dom_1_b">
-                                    <p>Новинка</p>
-                                </div>
-                            </div>
-                            <div class="section_2_content_box_5_card_dom_2_border">
-                                <div class="section_2_content_box_5_card_dom_2">
-                                <img src="img/image_2.png" alt="img-1">
-                                </div>
-                                <div class="section_2_content_box_5_card_dom_3">
-                                <a href="#">
-                                    <img src="img/arrow_down.png" alt="arrow">
-                                    Есть образцы в салоне
-                                </a>
-                                </div>
-                                <div class="section_2_content_box_5_card_dom_4">
-                                    <p>Коллекция EQUIPE VILLAGE</p>
-                                </div>
-                                <div class="section_2_content_box_5_card_dom_5">
-                                    <div class="section_2_content_box_5_card_dom_5_stile">
-                                        <p>Страна:&nbsp;<span>Испания</span></p>
-                                        <p>Стиль:&nbsp;<span>Современный</span></p>
-                                    </div>
-                                    <div class="section_2_content_box_5_card_dom_5_medal">
-                                        <img src="img/medal-1.png" alt="medal-1">
-                                        <img src="img/medal-2.png" alt="medal-2">
-                                    </div>
-                                </div>
-                                <div class="section_2_content_box_5_card_dom_6">
-                                    <div class="section_2_content_box_5_card_dom_6_a">
-                                        <p>Цена от:&nbsp;<span>20 150 руб./м²</span></p>
-                                    </div>
-                                    <a href="#" class="section_2_content_box_5_card_dom_6_b">
-                                        В избранное<img src="img/heart-blue.png" alt="heart">
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-
-                            <div class="section_2_content_box_5_card">
-                            <div class="section_2_content_box_5_card_dom_1">
-                                <div class="section_2_content_box_5_card_dom_1_a">
-                                    <p>-20%</p>
-                                </div>
-                                <div class="section_2_content_box_5_card_dom_1_b">
-                                    <p>Новинка</p>
-                                </div>
-                            </div>
-                            <div class="section_2_content_box_5_card_dom_2_border">
-                                <div class="section_2_content_box_5_card_dom_2">
-                                    <img src="img/image_3.png" alt="img-1">
-                                </div>
-                                <div class="section_2_content_box_5_card_dom_3">
-                                    <a href="#">
-                                        <img src="img/arrow_down.png" alt="arrow">
-                                        Есть образцы в салоне
-                                    </a>
-                                </div>
-                                <div class="section_2_content_box_5_card_dom_4">
-                                    <p>Коллекция EQUIPE VILLAGE</p>
-                                </div>
-                                <div class="section_2_content_box_5_card_dom_5">
-                                    <div class="section_2_content_box_5_card_dom_5_stile">
-                                        <p>Страна:&nbsp;<span>Испания</span></p>
-                                        <p>Стиль:&nbsp;<span>Современный</span></p>
-                                    </div>
-                                    <div class="section_2_content_box_5_card_dom_5_medal">
-                                        <img src="img/medal-1.png" alt="medal-1">
-                                        <img src="img/medal-2.png" alt="medal-2">
-                                    </div>
-                                </div>
-                                <div class="section_2_content_box_5_card_dom_6">
-                                    <div class="section_2_content_box_5_card_dom_6_a">
-                                        <p>Цена от:&nbsp;<span>20 150 руб./м²</span></p>
-                                    </div>
-                                    <a href="#" class="section_2_content_box_5_card_dom_6_b">
-                                        В избранное<img src="img/heart-blue.png" alt="heart">
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="section_2_content_box_5">
-                        <div class="section_2_content_box_5_card">
-                            <div class="section_2_content_box_5_card_dom_1">
-                                <div class="section_2_content_box_5_card_dom_1_a">
-                                    <p>-20%</p>
-                                </div>
-                                <div class="section_2_content_box_5_card_dom_1_b">
-                                    <p>Новинка</p>
-                                </div>
-                                <div class="section_2_content_box_5_card_dom_1_c">
-                                    <p>Хит!</p>
-                                </div>
-                            </div>
-                            <div class="section_2_content_box_5_card_dom_2_border">
-                                <div class="section_2_content_box_5_card_dom_2">
-                                <img src="img/image_1.png" alt="img-1">
-                            </div>
-                                <div class="section_2_content_box_5_card_dom_3">
-                                <a href="#">
-                                    <img src="img/arrow_down.png" alt="arrow">
-                                    Есть образцы в салоне
-                                </a>
-                            </div>
-                                <div class="section_2_content_box_5_card_dom_4">
-                                <p>Коллекция EQUIPE VILLAGE</p>
-                            </div>
-                                <div class="section_2_content_box_5_card_dom_5">
-                                <div class="section_2_content_box_5_card_dom_5_stile">
-                                    <p>Страна:&nbsp;<span>Испания</span></p>
-                                    <p>Стиль:&nbsp;<span>Современный</span></p>
-                                </div>
-                                <div class="section_2_content_box_5_card_dom_5_medal">
-                                    <img src="img/medal-1.png" alt="medal-1">
-                                    <img src="img/medal-2.png" alt="medal-2">
-                                </div>
-                            </div>
-                                <div class="section_2_content_box_5_card_dom_6">
-                                <div class="section_2_content_box_5_card_dom_6_a">
-                                    <p>Цена от:&nbsp;<span>20 150 руб./м²</span></p>
-                                </div>
-                                <a href="#" class="section_2_content_box_5_card_dom_6_b">
-                                    В избранное<img src="img/heart-blue.png" alt="heart">
-                                </a>
-                            </div>
-                            </div>
-                        </div>
-
-                            <div class="section_2_content_box_5_card">
-                            <div class="section_2_content_box_5_card_dom_1">
-                                <div class="section_2_content_box_5_card_dom_1_a">
-                                    <p>-20%</p>
-                                </div>
-                                <div class="section_2_content_box_5_card_dom_1_b">
-                                    <p>Новинка</p>
-                                </div>
-                            </div>
-                            <div class="section_2_content_box_5_card_dom_2_border">
-                                <div class="section_2_content_box_5_card_dom_2">
-                                <img src="img/image_2.png" alt="img-1">
-                                </div>
-                                <div class="section_2_content_box_5_card_dom_3">
-                                <a href="#">
-                                    <img src="img/arrow_down.png" alt="arrow">
-                                    Есть образцы в салоне
-                                </a>
-                                </div>
-                                <div class="section_2_content_box_5_card_dom_4">
-                                    <p>Коллекция EQUIPE VILLAGE</p>
-                                </div>
-                                <div class="section_2_content_box_5_card_dom_5">
-                                    <div class="section_2_content_box_5_card_dom_5_stile">
-                                        <p>Страна:&nbsp;<span>Испания</span></p>
-                                        <p>Стиль:&nbsp;<span>Современный</span></p>
-                                    </div>
-                                    <div class="section_2_content_box_5_card_dom_5_medal">
-                                        <img src="img/medal-1.png" alt="medal-1">
-                                        <img src="img/medal-2.png" alt="medal-2">
-                                    </div>
-                                </div>
-                                <div class="section_2_content_box_5_card_dom_6">
-                                    <div class="section_2_content_box_5_card_dom_6_a">
-                                        <p>Цена от:&nbsp;<span>20 150 руб./м²</span></p>
-                                    </div>
-                                    <a href="#" class="section_2_content_box_5_card_dom_6_b">
-                                        В избранное<img src="img/heart-blue.png" alt="heart">
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-
-                            <div class="section_2_content_box_5_card">
-                            <div class="section_2_content_box_5_card_dom_1">
-                                <div class="section_2_content_box_5_card_dom_1_a">
-                                    <p>-20%</p>
-                                </div>
-                                <div class="section_2_content_box_5_card_dom_1_b">
-                                    <p>Новинка</p>
-                                </div>
-                            </div>
-                            <div class="section_2_content_box_5_card_dom_2_border">
-                                <div class="section_2_content_box_5_card_dom_2">
-                                    <img src="img/image_3.png" alt="img-1">
-                                </div>
-                                <div class="section_2_content_box_5_card_dom_3">
-                                    <a href="#">
-                                        <img src="img/arrow_down.png" alt="arrow">
-                                        Есть образцы в салоне
-                                    </a>
-                                </div>
-                                <div class="section_2_content_box_5_card_dom_4">
-                                    <p>Коллекция EQUIPE VILLAGE</p>
-                                </div>
-                                <div class="section_2_content_box_5_card_dom_5">
-                                    <div class="section_2_content_box_5_card_dom_5_stile">
-                                        <p>Страна:&nbsp;<span>Испания</span></p>
-                                        <p>Стиль:&nbsp;<span>Современный</span></p>
-                                    </div>
-                                    <div class="section_2_content_box_5_card_dom_5_medal">
-                                        <img src="img/medal-1.png" alt="medal-1">
-                                        <img src="img/medal-2.png" alt="medal-2">
-                                    </div>
-                                </div>
-                                <div class="section_2_content_box_5_card_dom_6">
-                                    <div class="section_2_content_box_5_card_dom_6_a">
-                                        <p>Цена от:&nbsp;<span>20 150 руб./м²</span></p>
-                                    </div>
-                                    <a href="#" class="section_2_content_box_5_card_dom_6_b">
-                                        В избранное<img src="img/heart-blue.png" alt="heart">
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                     <div class="section_2_content_box_6">
                         <a href="#">Показать ещё
                             <img src="img/Cros.png">
@@ -789,7 +497,102 @@
         </section>
 
         <footer class="footer">
+            <div class="footer_container">
+                <div class="footer_container_table_one">
+                    <a href="#">+7 999 888 65 55</a>
+                    <a href="#">maneger@plitka.ivanna.ru</a>
+                    <div class="box_socseti">
+                        <a href="#">
+                            <img src="img/logos_whatsapp.png" alt="whatsapp">
+                        </a>
+                        <a href="#">
+                            <img src="img/Group%20531.png" alt="telegram">
+                        </a>
+                    </div>
+                    <div class="address">
+                        <span>Москва</span>, Складочная 1, строение 27
+                    </div>
+                    <div class="hours">
+                        Пн-Вс 10:00 – 21:00
+                    </div>
+                </div>
+                <div class="footer_container_table_two">
+                    <p>Каталог</p>
+                    <a href="#">Плитка</a>
+                    <a href="#">Керамогранит</a>
+                    <a href="#">Мозаика</a>
+                    <a href="#">Клинкерная плитка</a>
+                    <a href="#">Сопутствующие</a>
+                </div>
+                <div class="footer_container_table_three">
+                    <p>Информация</p>
+                    <a href="#">Оплата и доставка</a>
+                    <a href="#">Обмен и возврат</a>
+                    <a href="#">Акции</a>
+                    <a href="#">Сотрудничество</a>
+                    <a href="#">Пользовательское соглашение</a>
+                </div>
+                <div class="footer_container_table_four">
+                    <div class="footer_container_table_four_soc_seti_2">
+                        Наши соцсети:
+                        <div class="footer_container_table_four_soc_seti_2_img">
+                            <a href="#">
+                                <img src="img/vk.png" alt="vk">
+                            </a>
+                            <a href="#">
+                                <img src="img/Слой%205.png" alt="youTube">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="footer_container_table_four_pay">
+                        Принемаем к оплате:
+                        <div class="footer_container_table_four_soc_seti_2_img">
+                            <a href="#">
+                                <img src="img/visa.png" alt="visa">
+                            </a>
+                            <a href="#">
+                                <img src="img/mk.png" alt="masterCard">
+                            </a>
+                            <a href="#">
+                                <img src="img/mir.png" alt="мир">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
+
+            <div class="footer_bottom">
+                <div class="footer_bottom_container">
+                    <div class="footer_bottom_container_box_1">
+                        <div class="footer_bottom_container_box_1_content">
+                            <img src="img/footer-logo.png" alt="logo">
+                            © Плитка Иванна 2022
+                            <a href="#">Карта сайта</a>
+                        </div>
+                    </div>
+                    <div class="footer_bottom_container_box_2">
+                        <div class="footer_bottom_container_box_2_content">
+                            <a href="#">Напольные покрытия</a>
+                            <a href="#">Обои</a>
+                            <a href="#">Межкомнатные двери</a>
+                        </div>
+                    </div>
+                    <div class="footer_bottom_container_box_3">
+                        <div class="footer_bottom_container_box_3_content">
+                            Создание и разработка сайта
+                            <div class="footer_bottom_container_box_3_content_logo">
+                                <div class="footer_bottom_container_box_3_content_logo_box_1">
+                                    <img src="img/SHOGO.png" alt="shogo">
+                                </div>
+                                <div class="footer_bottom_container_box_3_content_logo_box_2">
+                                    Digital communication agency since 2003 by denis belyakov
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </footer>
     </main>
 
