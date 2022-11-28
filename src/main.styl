@@ -1,8 +1,108 @@
 @import "./normalize.css"
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap');
 
+//-------------------Mixins---------------
+
+style_footer_a()
+  font-family 'Nunito Sans', sans-serif
+  font-weight 400
+  font-size 16px
+  line-height 38px
+  letter-spacing 0.03em
+  text-decoration none
+  color #2B2B2B
+style_footer_1()
+  font-family 'Nunito Sans', sans-serif
+  font-weight 300
+  font-size 14px
+  line-height 19px
+  letter-spacing 0.05em
+  color #C4C4C4
+style_1()
+  text-decoration none
+  font-family 'Nunito Sans', sans-serif
+  font-weight 700
+  font-size 14px
+  line-height 19px
+  letter-spacing 0.03em
+  color #2C75FF
+style_2()
+  text-decoration none
+  font-family 'Nunito Sans', sans-serif
+  font-weight 400
+  font-size 13px
+  line-height 17px
+  letter-spacing 0.03em
+  color #2B2B2B
+style_3()
+  font-family 'Nunito Sans', sans-serif
+  font-weight 700
+  font-size 13px
+  line-height 18px
+  letter-spacing 0.03em
+  color #2B2B2B
+style_4()
+  text-decoration none
+  font-family 'Nunito Sans', sans-serif
+  font-weight 400
+  font-size 14px
+  line-height 18px
+  letter-spacing 0.03em
+  color #2B2B2B
+style_5()
+  font-family 'Nunito Sans', sans-serif
+  font-weight 600
+  font-size 12px
+  line-height 15px
+  letter-spacing 0.03em
+style_6()
+  color #2B2B2B
+  font-family 'Nunito Sans', sans-serif
+  font-weight 400
+  font-size 15px
+  line-height 19px
+  letter-spacing 0.03em
+style_h2()
+  font-family 'Nunito Sans', sans-serif
+  font-weight 700
+  font-size 20px
+  line-height 27px
+  letter-spacing 0.03em
+  color #2B2B2B
+placeholder()
+  font-family 'Nunito Sans', sans-serif
+  font-weight: 400
+  font-size 16px
+  line-height 22px
+  letter-spacing 0.03em
+  color #2B2B2B
+  padding-left 3px
+rectangle()
+  width 25px
+  height 25px
+  border 1px solid #CECECE
+  border-radius 50%
+  margin-left 11px
+strong()
+  font-family 'Nunito Sans', sans-serif
+  font-weight 700
+  font-size 16px
+  line-height 22px
+  letter-spacing 0.03em
+strong-2()
+  text-decoration none
+  font-family 'Nunito Sans', sans-serif
+  font-weight 700
+  font-size 18px
+  line-height 24px
+  letter-spacing 0.03em
+style_flex()
+  display flex
+  align-items center
+  justify-content space-between
 
 //-------------------popUp---------------------
+
 .open_pop_up
   font-family 'Nunito Sans', sans-serif
   font-size 13px
@@ -10,12 +110,9 @@
   line-height 18px
   letter-spacing 0.03em
   color #2B2B2B
-
 .popUp_wrapper
-  display flex
-  align-items center
+  style_flex()
   justify-content center
-
 .pop_up
   width 100%
   height 100%
@@ -26,16 +123,13 @@
   z-index 2
   transform translateY(-45.5%) scale(0)
   transition all .4s ease
-
 .pop_up.active
   transform translateY(0%) scale(100%)
   background-color rgba(0, 0, 0, .7)
-
 .pop_up_container
   display: flex
   width: 100%
   height: 100%
-
 .pop_up_body
   margin auto
   max-width 700px
@@ -44,7 +138,6 @@
   text-align center
   padding 50px
   position relative
-
 .popup_title
   font-family "Nunito Sans", sans-serif
   line-height 30px
@@ -53,7 +146,6 @@
   font-size 1.5rem
   margin-bottom 30px
   color #2B2B2B
-
 .content
   width inherit
   //border 1px solid black
@@ -102,7 +194,6 @@
   margin-top 10px
 .send_director:hover
   background #2c41ff
-
 .pop_up_close
   position absolute
   top 5px
@@ -119,94 +210,58 @@
   padding 0
   margin 0
   box-sizing border-box
-
 .main_wrapper
-  //width 1920px
-  //border 3px solid red
+  max-width 1920px
+  margin 0 auto
 .header_container_top_box_1_contact
   width 500px
   height 70px
-  //border 1px solid black
-  display flex
-  align-items center
-  justify-content space-between
+  style_flex()
   &_box_1
     width 66px
     height 30px
-    //border 1px solid black
     display flex
     align-items center
     justify-content space-between
   &_box_2
     width 162px
     height 50px
-    //border 1px solid black
-    display flex
+    style_flex()
     flex-direction column
-    justify-content space-between
     &_tel
-      display flex
+      style_flex()
       justify-content center
-      align-items center
       width inherit
       height 19px
-      //border 1px solid black
       &>a
-        text-decoration none
-        font-family 'Nunito Sans', sans-serif
-        font-weight 700
-        font-size 14px
-        line-height 19px
-        letter-spacing 0.05em
-        color #2C75FF
+        style_1()
       &_d
-        display flex
+        style_flex()
         justify-content center
-        align-items center
         width inherit
         height 19px
         margin-bottom 6px
-        //border 1px solid black
         &>a
-          text-decoration none
-          font-family 'Nunito Sans', sans-serif
-          font-weight 400
-          font-size 13px
-          line-height 17px
-          letter-spacing 0.03em
-          color #2B2B2B
+          style_2()
   &_box_3
     display flex
     flex-wrap wrap
     width 245px
     height 50px
-    //border 1px solid black
     &>p
-      font-family 'Nunito Sans', sans-serif
-      font-weight 400
-      font-size 13px
-      line-height 17px
-      letter-spacing 0.03em
-      color #2B2B2B
-      display inline-block
+      style_2()
 strong
-  font-family 'Nunito Sans', sans-serif
-  font-weight 700
-  font-size 13px
-  line-height 18px
-  letter-spacing 0.03em
+  style_3()
 .header
   position relative
   display flex
   justify-content center
   width 100%
-  //height 265px
   border-bottom 1px solid #CECECE
   &_container
     max-width 1725px
     height inherit
     margin 0 auto
-    //border 1px dashed red
     display flex
     flex-direction column
     justify-content space-between
@@ -216,58 +271,36 @@ strong
       justify-content space-between
       width inherit
       height 153px
-      //border 1px solid black
       &_box_1
         width 564px
         height inherit
-        //border 1px solid green
         display flex
         flex-wrap wrap
         &_items
           width inherit
           height 25px
-          display flex
-          align-items center
-          justify-content space-between
-          //border 1px solid black
+          style_flex()
           &>p
-            font-family 'Nunito Sans', sans-serif
-            font-weight 400
-            font-size 13px
-            line-height 18px
-            font-style normal
-            color #2B2B2B
+            style_3()
           &>a
-            font-family 'Nunito Sans', sans-serif
-            font-style normal
-            font-weight 700
-            font-size 13px
-            line-height 18px
-            color #2B2B2B
+            style_3()
+          &>a:hover
             text-decoration underline
       &_box_2
         display flex
         justify-content center
         width 300px
         height inherit
-        //border 1px solid green
         &>img
           height 122px
 .header_container_top_box_3
   width 544px
   height inherit
-  //border 1px solid green
   &_items
-    display flex
-    justify-content space-between
-    align-items center
+    style_flex()
     &>a
-      font-family 'Nunito Sans', sans-serif
+      style_3()
       font-weight 400
-      font-size 13px
-      line-height 18px
-      color #2B2B2B
-      text-decoration none
       display flex
       align-items center
 .arrow_down
@@ -275,8 +308,7 @@ strong
 .search_box_main
   width inherit
   height 85%
-  display flex
-  align-items center
+  style_flex()
   justify-content center
   &_container
     display flex
@@ -288,7 +320,6 @@ strong
     width 338px
     height 54px
     border-radius 40px
-    //border 1px solid white
     display inline-block
     font-family 'Nunito Sans', sans-serif
     padding: 0 10px
@@ -303,40 +334,22 @@ strong
       height 45px
       top 5%
       right 3%
+
 .search_form_search::placeholder
-  font-family 'Nunito Sans', sans-serif
-  font-size 16px
-  font-weight: 400
-  line-height 22px
-  letter-spacing 0.03em
-  color #2B2B2B
-  padding-left 3px
+  placeholder()
 .header_container_bottom_1
   width 1725px
-  height 56px
-  //border 1px solid black
+  min-height 56px
   background  #F5F5F5
-  display flex
-  align-items center
-  justify-content space-between
+  style_flex()
   padding 0 10px
   &_allBrands
-    //border 1px solid black
-    display flex
-    align-items center
-    justify-content space-between
-
+    style_flex()
     &>a
-      text-decoration none
-      font-family "Nunito Sans", sans-serif
-      font-weight 700
-      font-size 14px
-      line-height 19px
-      letter-spacing 0.03em
+      style_1()
       color #2B2B2B
       display flex
       align-items center
-
       &>img
         width 10px
         height 10px
@@ -345,286 +358,188 @@ strong
   &_alphabet
     &>a
       margin-right 48px
-      text-decoration none
-      font-family "Nunito Sans", sans-serif
-      font-weight 700
-      font-size 14px
-      line-height 19px
-      letter-spacing 0.03em
+      style_1()
       color #2B2B2B
     &>a:last-child
       margin 0
   &>a
-    text-decoration none
-    font-family "Nunito Sans", sans-serif
-    font-weight 700
-    font-size 14px
-    line-height 19px
-    letter-spacing 0.03em
+    style_1()
     color #2B2B2B
 .header_container_bottom_2
-    display flex
-    justify-content space-between
-    align-items center
+    style_flex()
     height 56px
-    //border 2px solid red
     &_item-left
-      //border 1px solid black
       width 656px
-      display flex
-      justify-content space-between
+      style_flex()
       &>a
+        style_1()
         font-size 15px
-        font-family 'Nunito Sans', sans-serif
-        font-weight 700
         line-height 21px
-        letter-spacing 0.03em
         text-decoration none
         color #2B2B2B
 .header_container_bottom_2_item-right
-    width 564px
-    display flex
-    align-items center
-    justify-content space-between
+    max-width 564px
+    style_flex()
     &>a
       display flex
       align-items center
-      font-family 'Nunito Sans', sans-serif
-      font-style normal
-      font-weight 700
-      font-size 13px
-      line-height 18px
-      color #2C75FF
-      letter-spacing 0.03em
-      text-decoration none
+      style_3()
+      color #2c75ff
       &>img
         margin-right 5px
         height 27px
 .header_container_bottom_2_item-right a:first-child
+  style_1()
   font-size 15px
-  font-family 'Nunito Sans', sans-serif
-  font-weight 700
   line-height 21px
-  text-decoration none
   color #2B2B2B
+  margin-right 36px
 
 //------------------------section_1----------------------------
 
 .section_1
-  width 100%
-  height 75px
-  //border 1px solid black
+  width inherit
+  min-height 75px
+  style_flex()
   &_container
-    margin 0 auto
     width 1725px
     height inherit
-    //border 1px solid black
-    display flex
-    align-items center
+    margin 0 auto
     &>strong
-      font-family 'Nunito Sans', sans-serif
-      font-weight 700
-      font-size 13px
-      line-height 18px
-      letter-spacing 0.03em
-      color #2B2B2B
+      strong()
     &>a
-      font-family 'Nunito Sans', sans-serif
+      style_3()
       font-weight 400
-      font-size 13px
-      line-height 18px
-      letter-spacing 0.03em
-      color #2B2B2B
-      text-decoration none
+
 
 //------------------------section_2----------------------------
 
 .section_2
   width 100%
-  //height 2708px
-  //border 1px solid black
-  display flex
+  style_flex()
   justify-content center
   &_container
     width 1725px
-    //border 1px solid black
     display flex
   &_sidebar
     width 425px
-    height 1560px
+    height 1610px
     border-right 1px solid #CECECE
-    display flex
+    style_flex()
     justify-content center
     &_container
-      width 282px
-      height inherit
-      //border 1px solid black
+      max-width 282px
+      min-height inherit
       &_box_1
-        width inherit
-        height 161px
+        max-width inherit
+        min-height 161px
         border-bottom 1px solid #CECECE
         &_p1
-          display flex
-          align-items center
-          justify-content space-between
-          width 282px
-          height 31px
-          //border 1px solid black
+          style_flex()
+          max-width 282px
+          min-height 31px
           margin-top 13px
           &>a
-            text-decoration none
-            font-family 'Nunito Sans', sans-serif
-            font-weight 400
-            font-size 14px
-            line-height 18px
-            letter-spacing 0.03em
-            color #2B2B2B
+            style_4()
             &>span
               color #C4C4C4
+              margin-left 8px
         &_p2
-          display flex
-          justify-content space-between
-          width 272px
-          height 36px
-          //border 1px solid black
+          style_flex()
+          max-width 272px
+          min-height 36px
           margin-top 13px
           border-radius 3px
           &_a
-            width 131px
-            height 35px
-            //border 1px solid black
-            display flex
-            align-items center
+            max-width 131px
+            min-height 35px
+            style_flex()
             justify-content center
             background #F5F5F5
+            padding 0 10px
             &>a
-              text-decoration none
-              font-family 'Nunito Sans', sans-serif
-              font-weight 400
-              font-size 13px
-              line-height 17px
-              letter-spacing 0.03em
-              color #2B2B2B
+              style_2()
               &>span
                 color #C4C4C4
+                margin-left 8px
           &_b
-            width 131px
-            height 35px
-            //border 1px solid black
-            display flex
-            align-items center
+            max-width 131px
+            min-height 35px
+            style_flex()
             justify-content center
             background #F5F5F5
             border-radius 3px
+            padding 0 10px
             &>a
-              text-decoration none
-              font-family 'Nunito Sans', sans-serif
-              font-weight 400
-              font-size 13px
-              line-height 17px
-              letter-spacing 0.03em
-              color #2B2B2B
+              style_2()
               &>span
                 color #C4C4C4
+                margin-left 8px
 .section_2_sidebar_container_box_2
-  width 282px
-  height 191px
+  max-width 282px
+  min-height 191px
   border-bottom 1px solid #CECECE
   &_h1
     width inherit
-    height 31px
-    //border 1px dashed black
-    display flex
-    justify-content space-between
-    align-items center
+    min-height 31px
+    style_flex()
     margin-top 15px
     &>strong
-      font-family 'Nunito Sans', sans-serif
-      font-size 16px
-      font-weight 700
-      line-height 22px
-      letter-spacing 0.03em
+      strong()
     &>a
       color #2C75FF
       text-decoration none
     &_a
-      width 282px
-      height 21px
-      //border 1px dashed black
+      mxa-width 282px
+      min-height 21px
       margin-top 10px
-      display flex
-      justify-content space-between
-      align-items center
+      style_flex()
       &>a
-        color #2B2B2B
-        font-family 'Nunito Sans', sans-serif
-        font-weight 400
-        font-size 14px
+        style_4()
         line-height 19px
-        letter-spacing 0.03em
+      &>a:hover
+        text-decoration underline
       &>p
-        text-decoration none
+        style_4()
         color #959595
-        font-family 'Nunito Sans', sans-serif
-        font-weight 400
-        font-size 14px
         line-height 19px
-        letter-spacing 0.03em
 .section_2_sidebar_container_box_3
-  width 282px
-  height 233px
+  max-width 282px
+  min-height 233px
   border-bottom 1px solid #CECECE
   &_h1
-    display flex
-    justify-content space-between
-    align-items center
+    style_flex()
     width inherit
-    height 31px
+    min-height 31px
     margin-top 15px
-    &>p
+    &>strong
       color #2B2B2B
-      font-family 'Nunito Sans', sans-serif
-      font-weight 700
-      font-size 16px
-      line-height 22px
-      letter-spacing 0.03em
+      strong()
     &>a
       text-decoration none
       color #C4C4C4
 .section_2_sidebar_container_box_3_check
-  width 282px
-  height 24px
-  //border 1px solid black
-  display flex
-  align-items center
-  justify-content space-between
+  max-width 282px
+  min-height 24px
+  style_flex()
   margin-top 10px
-  color #2B2B2B
-  font-family 'Nunito Sans', sans-serif
-  font-weight 400
-  font-size 14px
+  style_4()
   line-height 19px
-  letter-spacing 0.03em
-
-
+  color #959595
 .check      // label
-  display flex
-  width 200px
+  style_flex()
+  justify-content left
+  max-width 200px
   margin-left 30px
-
+  color #2B2B2B
 .check_input    // Браузерный чек бокс
   -webkit-appearance none
   -moz-appearance none
   appearance none
   position absolute
-
 .check_input:checked + .check_box
   background-image url("img/check_box_checked.png")
   background-size cover
-
-//.check_input:focus + .check_box
-//  border 2px solid gray
-
 .check_box    // кастомный чекбоск
   display flex
   align-items center
@@ -635,26 +550,16 @@ strong
   background-image url("img/check_box_1.png")
   margin-left -30px
   margin-right 15px
-
   &>p
-    text-decoration none
-    color #959595
-    font-family 'Nunito Sans', sans-serif
+    style_1()
     font-weight 400
-    font-size 14px
-    line-height 19px
-    letter-spacing 0.03em
 .section_2_sidebar_container_box_3_next
   width inherit
-  height 25px
-  //border 1px solid black
+  min-height 25px
   margin-top 19px
   &>a
     text-decoration none
     color #2C75FF
-
-
-
 .section_2_sidebar_container_box_4
   width inherit
   height 164px
@@ -662,10 +567,7 @@ strong
   &_price-h1
     width inherit
     height 31px
-    display flex
-    align-items center
-    justify-content space-between
-    //border 1px solid black
+    style_flex()
     margin-top 15px
     &_a1
       display flex
@@ -673,55 +575,37 @@ strong
       justify-content space-between
       width 115px
       height 25px
-      //border 1px solid black
       &>strong
-        font-family 'Nunito Sans', sans-serif
-        font-size 16px
-        font-weight 700
-        line-height 22px
-        letter-spacing 0.03em
+        strong()
       &>p
-        font-family 'Nunito Sans', sans-serif
-        font-size 16px
-        font-weight 400
-        line-height 22px
-        letter-spacing 0.03em
-        color #2B2B2B
+        placeholder()
     &>a
       text-decoration none
       color #C4C4C4
   &_min-max_price
     width inherit
     height 41px
-    //border 1px solid black
-    display flex
-    justify-content space-between
-    align-items center
+    style_flex()
     margin-top 7px
     &_MIN-MAX
+      style_4()
       width 127px
       height 41px
       border 1px solid #C4C4C4
       border-radius 20px
-      display flex
-      align-items center
+      style_flex()
       justify-content center
 .section_2_sidebar_container_box_4_min-max_price_range
   width inherit
   height 40px
-  //border 1px solid black
-  display flex
+  style_flex()
   justify-content center
-  align-items center
   margin-top 15px
   &_slide-container
     width 282px
 .slider
   width 282px
   height 2px
-
-
-
 .section_2_sidebar_container_box_5
   width inherit
   height 365px
@@ -729,16 +613,11 @@ strong
   &_color_h1
     width inherit
     height 31px
-    display flex
-    justify-content space-between
-    align-items center
+    style_flex()
     margin-bottom 12px
+    margin-top 15px
     &>strong
-      font-family 'Nunito Sans', sans-serif
-      font-weight 700
-      font-size 16px
-      line-height 22px
-      letter-spacing 0.03em
+      strong()
     &>p
       color #C4C4C4
     &_d
@@ -749,120 +628,77 @@ strong
       margin-bottom 12px
       border-radius 28px
       &>a
-        margin-left 6px
-        text-decoration none
-        font-family 'Nunito Sans', sans-serif
-        color #2B2B2B
-        font-weight 400
-        font-size 14px
+        style_4()
         line-height 19px
-        letter-spacing 0.03em
+        margin-left 6px
       &>a:hover
         color #2C75FF
     &_d:hover
       background #F5F5F5
-
 .rectangle_white
-  width 25px
-  height 25px
-  border 1px solid #CECECE
-  border-radius 50%
+  rectangle()
   background white
-  margin-left 11px
 .rectangle_black
-  width 25px
-  height 25px
-  border-radius 50%
+  rectangle()
   background black
-  margin-left 11px
 .rectangle_blue
-  width 25px
-  height 25px
-  border-radius 50%
+  rectangle()
   background #2C75FF
-  margin-left 11px
 .rectangle_beige
-  width 25px
-  height 25px
-  border-radius 50%
+  rectangle()
   background #E3A77E
-  margin-left 11px
 .rectangle_red
-  width 25px
-  height 25px
-  border-radius 50%
+  rectangle()
   background #CE0D2D
-  margin-left 11px
 .rectangle_gray
-  width 25px
-  height 25px
-  border-radius 50%
+  rectangle()
   background #727272
-  margin-left 11px
-
-
-
 .section_2_sidebar_container_box_6
   width inherit
-  height 361px
+  min-height 361px
   &_items
     width inherit
     height 51px
-    display flex
-    align-items center
-    justify-content space-between
+    style_flex()
     border-bottom 1px solid #CECECE
+    &>strong
+      strong()
+      color #2b2b2b
+    &>a
+      display flex
+      align-items center
     &>img
       width 14px
       color #C4C4C4
-
-
-
 .section_2_sidebar_container_box_7
   width inherit
   height 50px
-  //border 1px solid black
+  margin-top 26px
   &_button
     width inherit
     height 50px
-    //border 1px solid black
-    display flex
-    align-items center
+    style_flex()
     justify-content center
-    text-decoration none
     background #2c75ff
-    margin-top 26px
-    color white
-    font-family 'Nunito Sans', sans-serif
-    font-weight 400
-    font-size 16px
+    placeholder()
     line-height 20px
-    letter-spacing 0.03em
+    color white
     &>span
       color white
-      font-family 'Nunito Sans', sans-serif
-      font-weight 700
-      font-size 16px
+      strong()
       line-height 20px
-      letter-spacing 0.03em
-
-
 .section_2_content
   max-width 1351px
-  //height 2932px
-  //border 1px solid black
+  border 1px solid black
   margin-left 44px
   &_box_1
     width inherit
     height 174px
-    //border 1px solid black
     display flex
     flex-direction column
     justify-content space-between
     &_title
       width inherit
-      //height 41px
-      //border 1px solid black
       display flex
       align-items center
       font-family 'Nunito Sans', sans-serif
@@ -875,36 +711,26 @@ strong
     &_text
       width inherit
       height 110px
-      //border 1px solid black
       font-family 'Nunito Sans', sans-serif
       font-size 18px
       line-height 26px
       letter-spacing 0.03em
       font-weight 300
       margin-top 23px
-
   &_box_2
     width inherit
-    height 266px
-    //border 1px solid black
-    display flex
-    justify-content space-between
+    min-height 266px
+    style_flex()
     margin-top 56px
     &_container_1
-      width 889px
+      max-width 889px
       height inherit
-      //border 1px solid black
     &_container_2
-      width 427px
+      max-width 427px
       height inherit
-      //border 1px solid black
-
-
-
   &_box_3
     width inherit
-    height 100px
-    //border 1px solid black
+    min-height 100px
     display flex
     flex-wrap wrap
     align-items center
@@ -914,31 +740,22 @@ strong
       height 41px
       background #F5F5F5
       text-decoration none
-      display flex
-      align-items center
+      style_flex()
       justify-content center
-      margin-right 19px
-      font-family 'Nunito Sans', sans-serif
-      font-size 14px
-      font-weight 700
+      style_1()
       line-height 18px
-      letter-spacing 0.03em
       color #2B2B2B
+      margin-right 19px
     &>a:last-child
       margin-right 0
     &>a:nth-child(3n-3)
       width 96px
       height 41px
       background #F5F5F5
-
-
   &_box_4
     width inherit
     height 41px
-    //border 1px solid black
-    display flex
-    align-items center
-    justify-content space-between
+    style_flex()
     margin-top 43px
     &_line
       width 676px
@@ -949,33 +766,24 @@ strong
       height 41px
       border 1px solid #C4C4C4
       border-radius 40px
-      display flex
-      align-items center
+      style_flex()
       justify-content center
-      color #2B2B2B
-      font-family 'Nunito Sans', sans-serif
-      font-weight 400
-      font-size 14px
-      line-height 18px
-      letter-spacing 0.03em
-      text-decoration none
+      style_4()
       &>img
         margin-left 3px
         margin-top -3px
     &_settings
       width 428px
       height 41px
-      //border 1px solid black
       display flex
       &_col
-        display flex
-        align-items center
+        style_flex()
         justify-content center
         width 214px
         height 41px
         font-family 'Nunito Sans', sans-serif
-        font-size 15px
         font-weight 400
+        font-size 15px
         line-height 19px
         letter-spacing 0.03
         text-decoration none
@@ -993,82 +801,57 @@ strong
         border 1px solid #CECECE
         border-radius 0 40px 40px 0
         font-family 'Nunito Sans', sans-serif
-        font-size 15px
         font-weight 400
+        font-size 15px
         line-height 19px
         letter-spacing 0.03
         text-decoration none
         color #2B2B2B
         &>span
           font-weight 700
-
-
   &_box_5
     width 100%
     flex-wrap wrap
-    //border 1px solid black
-    display flex
-    align-items center
-    justify-content space-between
+    border 1px solid black
+    style_flex()
     margin-top 43px
     margin-bottom 75px
     &_card
       width 427px
-      //border-bottom 1px solid #CECECE
       &_dom_1
         width inherit
         height 31px
-        //border 1px solid black
         display flex
         &_a
           width 50px
           height inherit
-          //border 1px solid black
           background #2C75FF
-          display flex
-          align-items center
+          style_flex()
           justify-content center
           &>p
-            font-family 'Nunito Sans', sans-serif
-            font-weight 600
-            font-size 12px
-            line-height 15px
-            letter-spacing 0.03em
+            style_5()
             color #FFFFFF
         &_b
           width 84px
           height inherit
-          //border 1px solid black
           background #2B2B2B
-          display flex
-          align-items center
+          style_flex()
           justify-content center
           &>p
-            font-family 'Nunito Sans', sans-serif
-            font-weight 600
-            font-size 12px
-            line-height 15px
-            letter-spacing 0.03em
+            style_5()
             color #FFFFFF
         &_c
           width 52px
           height inherit
-          //border 1px solid black
           background #CECECE
-          display flex
-          align-items center
+          style_flex()
           justify-content center
           &>p
-            font-family 'Nunito Sans', sans-serif
-            font-weight 600
-            font-size 12px
-            line-height 15px
-            letter-spacing 0.03em
+            style_5()
             color #2C75FF
       &_dom_2
         width inherit
         height 359px
-        //border 1px solid black
         &_border
           border-bottom 1px solid #CECECE
         &_border:hover
@@ -1077,7 +860,6 @@ strong
       &_dom_3
         width inherit
         height 25px
-        //border 1px solid black
         display flex
         align-items center
         background #F5F5F5
@@ -1091,6 +873,8 @@ strong
           letter-spacing 0.03em
           text-decoration none
           margin-left 21px
+          display flex
+          align-items center
           &>img
             width 8px
             height 5px
@@ -1098,7 +882,6 @@ strong
       &_dom_4
         width inherit
         height 30px
-        //border 1px solid black
         display flex
         align-items center
         margin-bottom 12px
@@ -1113,31 +896,19 @@ strong
       &_dom_5
         width inherit
         height 51px
-        //border 1px solid black
-        display flex
-        justify-content space-between
-        align-items center
+        style_flex()
         &_stile
           width 142px
           height 37px
-          //border 1px solid black
           margin-left 21px
           &>p
-            color #2B2B2B
-            font-family 'Nunito Sans', sans-serif
-            font-weight 400
-            font-size 13px
-            line-height 16px
-            letter-spacing 0.03em
+            style_2()
             &>span
               font-weight 700
         &_medal
-          display flex
-          align-items center
-          justify-content space-between
+          style_flex()
           width 116px
           height 51px
-          //border 1px solid black
           margin-right 86px
           &>img
             width 51px
@@ -1145,79 +916,49 @@ strong
       &_dom_6
         width inherit
         height 50px
-        //border 1px solid black
         display flex
         margin-top 22px
         &_a
           width 263px
           height 50px
-          //border 1px solid black
           display flex
           align-items center
           &>p
+            style_6()
             margin-left 21px
-            color #2B2B2B
-            font-family 'Nunito Sans', sans-serif
-            font-weight 400
-            font-size 15px
-            line-height 19px
-            letter-spacing 0.03em
             &>span
               font-weight 700
         &_b
           width 164px
           height 51px
           border 1px solid #CECECE
-          display flex
-          align-items center
+          style_flex()
           justify-content center
           color #2B2B2B
-          font-family 'Nunito Sans', sans-serif
-          font-weight 400
-          font-size 15px
-          line-height 19px
-          letter-spacing 0.03em
-          text-decoration none
-
-
+          style_6()
   &_box_6
     width inherit
     height 25px
-    //border 1px solid black
-    display flex
-    align-items center
+    style_flex()
     justify-content center
     margin-top 100px
     &>a
       width 155px
-      display flex
-      align-items center
-      justify-content space-between
-      text-decoration none
-      font-family 'Nunito Sans', sans-serif
-      font-weight 700
-      font-size 18px
-      line-height 24px
-      letter-spacing 0.03em
+      style_flex()
+      strong-2()
       color #2B2B2B
       &>img
         width 18px
-
   &_box_7
     width inherit
     height 48px
-    //border 1px solid black
-    display flex
-    align-items center
+    style_flex()
     justify-content center
     margin-top 49px
     &_container
       width 355px
-      height 48px
-      //border 1px solid black
-      display flex
-      align-items center
-      justify-content space-between
+      min-height 48px
+      style_flex()
       &_arrow
         width 42px
         height 42px
@@ -1234,8 +975,7 @@ strong
         height 47px
         border 1px solid transparent
         border-radius 50%
-        display flex
-        align-items center
+        style_flex()
         justify-content center
         font-family 'Nunito Sans', sans-serif
         font-weight 700
@@ -1247,27 +987,18 @@ strong
       &_pagination:hover
         background #F5F5F5
         color #2c75ff
-
-
   &_box_8
     width inherit
     height 1px
     background #CECECE
     margin-top 102px
-
-
   &_box_9
     width inherit
     height 317px
-    //border 1px solid black
+    border 1px solid black
     margin-top 81px
     &>h2
-      font-family 'Nunito Sans', sans-serif
-      font-weight 700
-      font-size 20px
-      line-height 27px
-      letter-spacing 0.03em
-      color #2B2B2B
+      style_h2()
       margin-bottom 25px
     &>p
       width 878px
@@ -1277,28 +1008,21 @@ strong
       line-height 28px
       letter-spacing 0.03em
       color #2B2B2B
-
-
 .footer
   width 100%
-  //height 383px
-  //border 1px solid black
   margin-top 112px
   &_bottom
     width inherit
-    //height 115px
-    //border 1px solid black
     background #2B2B2B
     padding 34px 0
     &_container
       max-width 1725px
       height inherit
-      //border 1px solid black
+      //border 1px solid white
       margin 0 auto
       display flex
       flex-wrap wrap
       justify-content space-between
-
       &_box_1
         max-width 529px
         height inherit
@@ -1307,65 +1031,36 @@ strong
         align-items center
         flex-wrap wrap
         &_content
-          width 608px
-          //height 46px
+          width inherit
           //border 1px solid white
           border-right 1px solid #C4C4C4
-          display flex
+          style_flex()
           flex-wrap wrap
-          align-items center
-          justify-content space-between
-          font-family 'Nunito Sans', sans-serif
-          font-weight 300
-          font-size 14px
-          line-height 19px
-          letter-spacing 0.05em
-          color #C4C4C4
-          padding-right 56px
+          style_footer_1()
+          padding-right 59px
           &>a
-            font-family 'Nunito Sans', sans-serif
-            font-weight 300
-            font-size 14px
-            line-height 19px
-            letter-spacing 0.05em
-            color #C4C4C4
-            text-decoration none
+            style_footer_1()
+            margin-left 35px
           &>img
-            margin-right 40px
-
+            margin-right 58px
       &_box_2
-        max-width 529px
+        width 525px
         height inherit
         //border 1px solid white
-        display flex
-        align-items center
-        justify-content space-between
+        style_flex()
         border-right 1px solid #C4C4C4
         &_content
           width inherit
-          //height 46px
           //border 1px solid white
-          display flex
+          style_flex()
+          justify-content center
           flex-wrap wrap
-          align-items center
-          justify-content space-between
-          font-family 'Nunito Sans', sans-serif
-          font-weight 300
-          font-size 14px
-          line-height 19px
-          letter-spacing 0.05em
-          color #C4C4C4
-          padding 0 56px
+          style_footer_1()
+          //padding 0 56px
           &>a
-            font-family 'Nunito Sans', sans-serif
-            font-weight 300
-            font-size 14px
-            line-height 19px
-            letter-spacing 0.05em
-            color #C4C4C4
+            style_footer_1()
             text-decoration none
-
-
+            margin-right 40px
       &_box_3
         max-width 666px
         height inherit
@@ -1374,27 +1069,16 @@ strong
         align-items center
         justify-content center
         flex-wrap wrap
-
         &_content
           width inherit
-          //height 46px
           //border 1px solid white
-          display flex
+          style_flex()
           flex-wrap wrap
-          align-items center
-          justify-content space-between
-          font-family 'Nunito Sans', sans-serif
-          font-weight 300
-          font-size 14px
-          line-height 19px
-          letter-spacing 0.05em
-          color #C4C4C4
+          style_footer_1()
           padding 0 45px
           &_logo
-            display flex
+            style_flex()
             //flex-wrap wrap
-            align-items center
-            justify-content space-between
             max-width 332px
             height inherit
             margin-left 15px
@@ -1403,7 +1087,6 @@ strong
               width 131px
               height 22px
               border-right 2px solid #C4C4C4
-
             &_box_2
               width 201px
               font-family 'Nunito Sans', sans-serif
@@ -1412,97 +1095,51 @@ strong
               margin-left 10px
               line-height 13px
               text-transform uppercase
-
-
   &_container
     max-width 1725px
     height inherit
-    //border 1px solid black
+    border 1px solid black
     border-top 1px solid #C4C4C4
     margin 0 auto
-    display flex
+    style_flex()
     flex-wrap wrap
-    align-items center
-    justify-content space-between
     padding 63px 0
 
     &_table_one
       width 300px
-      //border 1px solid black
       &>a
-        font-family 'Nunito Sans', sans-serif
-        font-size 16px
-        font-weight 700
-        line-height 22px
-        letter-spacing 0.05em
+        strong()
+        color #2B2B2B
         display flex
         flex-wrap wrap
         width 100%
-        text-decoration none
-        color #2B2B2B
-
       &>a:first-child
         margin-bottom 18px
-
 .box_socseti
-    margin-top 32px
-    &>a
-      margin-right 16px
+  margin-top 32px
+  &>a
+    margin-right 16px
 .address
-  font-family 'Nunito Sans', sans-serif
-  font-weight 400
-  font-size 16px
-  line-height 22px
-  letter-spacing 0.05em
+  placeholder()
   margin-top 30px
-  color #2B2B2B
   &>span
-    font-family 'Nunito Sans', sans-serif
-    font-weight 700
-    font-size 16px
-    line-height 22px
+    strong()
     letter-spacing 0.05em
 .hours
-    font-family 'Nunito Sans', sans-serif
-    font-weight 700
-    font-size 16px
-    line-height 22px
-    letter-spacing 0.03em
-    margin-top 16px
+  strong()
     color #2B2B2B
-
-
 .footer_container_table_two
     width 300px
-    //border 1px solid black
     display flex
     flex-wrap wrap
     flex-direction column
     &>p
       width 100%
-      font-family 'Nunito Sans', sans-serif
-      font-weight 700
-      font-size 16px
-      line-height 22px
-      letter-spacing 0.03em
-      color #2B2B2B
+      strong()
       margin-bottom 10px
     &>a
       width 100%
-      text-decoration none
-      color #2B2B2B
-      font-family 'Nunito Sans', sans-serif
-      font-weight 400
-      font-size 16px
-      line-height 38px
-      letter-spacing 0.03em
-
-
-
-
-
-
-
+      style_footer_a()
 .footer_container_table_three
   width 300px
   display flex
@@ -1510,43 +1147,20 @@ strong
   flex-direction column
   &>p
     width 100%
-    font-family 'Nunito Sans', sans-serif
-    font-weight 700
-    font-size 16px
-    line-height 22px
-    letter-spacing 0.03em
-    color #2B2B2B
+    strong()
     margin-bottom 10px
   &>a
     width 100%
-    text-decoration none
-    color #2B2B2B
-    font-family 'Nunito Sans', sans-serif
-    font-weight 400
-    font-size 16px
-    line-height 38px
-    letter-spacing 0.03em
-
-
+    style_footer_a()
 .footer_container_table_four
     width 300px
-    //border 1px solid black
     &_soc_seti_2
-      font-family 'Nunito Sans', sans-serif
-      font-weight 400
-      font-size 16px
-      line-height 38px
-      letter-spacing 0.03em
+      style_footer_a()
     &_soc_seti_2_img
       display flex
       align-items center
       &>a
         margin-right 31px
-
     &_pay
-      font-family 'Nunito Sans', sans-serif
-      font-weight 400
-      font-size 16px
-      line-height 38px
-      letter-spacing 0.03em
+      style_footer_a()
       margin-top 45px
