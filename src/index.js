@@ -1,4 +1,4 @@
-import './main.styl';
+import './style/main.styl';
 
 "use strict"
 
@@ -37,37 +37,53 @@ popUpContainers.forEach(container => {
 
 //-------------------------------------------------------------------------------------
 
-const array = [
-    {
-        percent: '-20%',
-        text: 'Новинка'
-        // src: 'img/image_1.png',
-    }
-];
-const containerCard = document.querySelector('.section_2_content_box_5');
-for (const element of array) {
-    const box5Card = document.createElement('div');
-    box5Card.classList.add('section_2_content_box_5_card');
+// const array = [
+//     {
+//         percent: '-20%',
+//         text: 'Новинка'
+//         // src: 'img/image_1.png',
+//     }
+// ];
+// const containerCard = document.querySelector('.section_2_content_box_5');
+// for (const element of array) {
+//     const box5Card = document.createElement('div');
+//     box5Card.classList.add('section_2_content_box_5_card');
+//
+//     const box5CardDom1 = document.createElement('div');
+//     box5CardDom1.classList.add('section_2_content_box_5_card_dom_1');
+//     const box5CardDom2Border = document.createElement('div');
+//     box5CardDom2Border.classList.add('section_2_content_box_5_card_dom_2_border');
+//
+//     const box5CardDom1A = document.createElement('div');
+//     box5CardDom1A.classList.add('section_2_content_box_5_card_dom_1_a');
+//     const pA = document.createElement('p');
+//     pA.innerText = element.percent;
+//     box5CardDom1A.append(pA);
+//
+//     const box5CardDom1B = document.createElement('div');
+//     box5CardDom1B.classList.add('section_2_content_box_5_card_dom_1_b');
+//     const pB = document.createElement('p');
+//     pB.innerText = element.text;
+//     box5CardDom1B.append(pB);
+//
+//     box5CardDom1.append(box5CardDom1A);
+//     box5CardDom1.append(box5CardDom1B);
+//     box5Card.append(box5CardDom1, box5CardDom2Border);
+//     containerCard.append(box5Card);
+// }
 
-    const box5CardDom1 = document.createElement('div');
-    box5CardDom1.classList.add('section_2_content_box_5_card_dom_1');
-    const box5CardDom2Border = document.createElement('div');
-    box5CardDom2Border.classList.add('section_2_content_box_5_card_dom_2_border');
+//------------------------------------------------------------------------------------------------------
 
-    const box5CardDom1A = document.createElement('div');
-    box5CardDom1A.classList.add('section_2_content_box_5_card_dom_1_a');
-    const pA = document.createElement('p');
-    pA.innerText = element.percent;
-    box5CardDom1A.append(pA);
 
-    const box5CardDom1B = document.createElement('div');
-    box5CardDom1B.classList.add('section_2_content_box_5_card_dom_1_b');
-    const pB = document.createElement('p');
-    pB.innerText = element.text;
-    box5CardDom1B.append(pB);
 
-    box5CardDom1.append(box5CardDom1A);
-    box5CardDom1.append(box5CardDom1B);
-    box5Card.append(box5CardDom1, box5CardDom2Border);
-    containerCard.append(box5Card);
-}
+
+
+
+
+
+
+
+
+
+
+

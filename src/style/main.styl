@@ -2,7 +2,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap');
 
 //-------------------Mixins---------------
-
+title()
+  font-family 'Nunito Sans', sans-serif
+  font-size 40px
+  line-height 41px
+  letter-spacing 0.03em
+  font-weight 400
+  color #2B2B2B
+  opacity 32%
+text()
+  font-family 'Nunito Sans', sans-serif
+  font-size 18px
+  line-height 26px
+  letter-spacing 0.03em
+  font-weight 300
+  margin-top 23px
+  color #2B2B2B
 style_footer_a()
   font-family 'Nunito Sans', sans-serif
   font-weight 400
@@ -62,6 +77,20 @@ style_6()
   font-size 15px
   line-height 19px
   letter-spacing 0.03em
+style_7()
+  font-family "Nunito Sans", sans-serif
+  font-weight 400
+  font-size 11px
+  line-height 14px
+  letter-spacing 0.03em
+  color #ffffff
+style_col_prod()
+  font-family 'Nunito Sans', sans-serif
+  font-weight 400
+  font-size 15px
+  line-height 19px
+  letter-spacing 0.03
+  text-decoration none
 style_h2()
   font-family 'Nunito Sans', sans-serif
   font-weight 700
@@ -101,6 +130,21 @@ style_flex()
   align-items center
   justify-content space-between
 
+dom_3_a()
+  color #2C75FF
+  font-family 'Nunito Sans', sans-serif
+  font-weight 600
+  font-size 11px
+  line-height 15px
+  letter-spacing 0.03em
+  text-decoration none
+dom_4()
+  color #2B2B2B
+  font-family 'Nunito Sans', sans-serif
+  font-weight 400
+  font-size 18px
+  line-height 23px
+  letter-spacing 0.03em
 //-------------------popUp---------------------
 
 .open_pop_up
@@ -259,9 +303,10 @@ strong
   width 100%
   border-bottom 1px solid #CECECE
   &_container
-    max-width 1725px
+    width 1725px
     height inherit
     margin 0 auto
+    padding-top 10px
     display flex
     flex-direction column
     justify-content space-between
@@ -338,7 +383,7 @@ strong
 .search_form_search::placeholder
   placeholder()
 .header_container_bottom_1
-  width 1725px
+  width 100%
   min-height 56px
   background  #F5F5F5
   style_flex()
@@ -355,6 +400,8 @@ strong
         height 10px
         margin-left 6px
         margin-right 54px
+    &>a:last-child
+      margin-top 4px
   &_alphabet
     &>a
       margin-right 48px
@@ -365,6 +412,8 @@ strong
   &>a
     style_1()
     color #2B2B2B
+  &>a:last-child
+    margin-top 4px
 .header_container_bottom_2
     style_flex()
     height 56px
@@ -388,12 +437,14 @@ strong
       &>img
         margin-right 5px
         height 27px
-.header_container_bottom_2_item-right a:first-child
-  style_1()
-  font-size 15px
-  line-height 21px
-  color #2B2B2B
-  margin-right 36px
+    &>a:first-child
+      style_1()
+      font-size 15px
+      line-height 21px
+      color #2B2B2B
+      margin-right 36px
+    &>a:nth-child(2)
+      margin-right 33px
 
 //------------------------section_1----------------------------
 
@@ -422,14 +473,14 @@ strong
     width 1725px
     display flex
   &_sidebar
-    width 425px
-    height 1610px
-    border-right 1px solid #CECECE
-    style_flex()
+    max-width 425px
+    align-items normal
     justify-content center
     &_container
-      max-width 282px
+      max-width 325px
       min-height inherit
+      border-right 1px solid #CECECE
+      padding-right 40px
       &_box_1
         max-width inherit
         min-height 161px
@@ -532,13 +583,14 @@ strong
   max-width 200px
   margin-left 30px
   color #2B2B2B
+  cursor pointer
 .check_input    // Браузерный чек бокс
   -webkit-appearance none
   -moz-appearance none
   appearance none
   position absolute
 .check_input:checked + .check_box
-  background-image url("img/check_box_checked.png")
+  background-image url("@/img/check_box_checked.png")
   background-size cover
 .check_box    // кастомный чекбоск
   display flex
@@ -547,7 +599,7 @@ strong
   width 23px
   height 23px
   border 1px solid #CECECE
-  background-image url("img/check_box_1.png")
+  background-image url("@/img/check_box_1.png")
   margin-left -30px
   margin-right 15px
   &>p
@@ -687,9 +739,11 @@ strong
       color white
       strong()
       line-height 20px
+
+//--------------------content----------------------
+
 .section_2_content
   max-width 1351px
-  border 1px solid black
   margin-left 44px
   &_box_1
     width inherit
@@ -701,22 +755,11 @@ strong
       width inherit
       display flex
       align-items center
-      font-family 'Nunito Sans', sans-serif
-      font-size 40px
-      line-height 41px
-      letter-spacing 0.03em
-      font-weight 400
-      color #2B2B2B
-      opacity 32%
+      title()
     &_text
       width inherit
       height 110px
-      font-family 'Nunito Sans', sans-serif
-      font-size 18px
-      line-height 26px
-      letter-spacing 0.03em
-      font-weight 300
-      margin-top 23px
+      text()
   &_box_2
     width inherit
     min-height 266px
@@ -781,43 +824,30 @@ strong
         justify-content center
         width 214px
         height 41px
-        font-family 'Nunito Sans', sans-serif
-        font-weight 400
-        font-size 15px
-        line-height 19px
-        letter-spacing 0.03
-        text-decoration none
+        style_col_prod()
         color white
         background #2B2B2B
         border-radius 40px 0 0 40px
         &>span
           font-weight 700
       &_prod
-        display flex
-        align-items center
+        style_flex()
         justify-content center
         width 214px
         height 41px
         border 1px solid #CECECE
         border-radius 0 40px 40px 0
-        font-family 'Nunito Sans', sans-serif
-        font-weight 400
-        font-size 15px
-        line-height 19px
-        letter-spacing 0.03
-        text-decoration none
+        style_col_prod()
         color #2B2B2B
         &>span
           font-weight 700
   &_box_5
     width 100%
     flex-wrap wrap
-    border 1px solid black
     style_flex()
-    margin-top 43px
-    margin-bottom 75px
     &_card
       width 427px
+      margin-top 43px
       &_dom_1
         width inherit
         height 31px
@@ -827,51 +857,36 @@ strong
           height inherit
           background #2C75FF
           style_flex()
+          style_5()
+          color #FFFFFF
           justify-content center
-          &>p
-            style_5()
-            color #FFFFFF
         &_b
           width 84px
           height inherit
           background #2B2B2B
           style_flex()
           justify-content center
-          &>p
-            style_5()
-            color #FFFFFF
+          style_5()
+          color #FFFFFF
         &_c
           width 52px
           height inherit
           background #CECECE
+          style_5()
+          color #2C75FF
           style_flex()
           justify-content center
-          &>p
-            style_5()
-            color #2C75FF
       &_dom_2
         width inherit
         height 359px
-        &_border
-          border-bottom 1px solid #CECECE
-        &_border:hover
-          border-bottom none
-          outline 1px solid #CECECE
       &_dom_3
         width inherit
         height 25px
-        display flex
-        align-items center
+        style_flex()
         background #F5F5F5
         margin-bottom 20px
         &>a
-          color #2C75FF
-          font-family 'Nunito Sans', sans-serif
-          font-weight 600
-          font-size 11px
-          line-height 15px
-          letter-spacing 0.03em
-          text-decoration none
+          dom_3_a()
           margin-left 21px
           display flex
           align-items center
@@ -879,32 +894,35 @@ strong
             width 8px
             height 5px
             margin-right 7px
+        &_left-box
+          width 163px
+          height inherit
+          //border 1px solid black
+          background #2b2b2b
+          style_flex()
+          padding 0 7px
+          style_7()
+          &>img
+            margin-bottom 1px
       &_dom_4
         width inherit
         height 30px
         display flex
         align-items center
         margin-bottom 12px
-        &>p
-          color #2B2B2B
-          font-family 'Nunito Sans', sans-serif
-          font-weight 400
-          font-size 18px
-          line-height 23px
-          letter-spacing 0.03em
-          margin-left 21px
+        dom_4()
+        margin-left 21px
       &_dom_5
         width inherit
         height 51px
         style_flex()
-        &_stile
+        &_style
           width 142px
           height 37px
           margin-left 21px
-          &>p
-            style_2()
-            &>span
-              font-weight 700
+          style_2()
+          &>span
+            font-weight 700
         &_medal
           style_flex()
           width 116px
@@ -923,11 +941,10 @@ strong
           height 50px
           display flex
           align-items center
-          &>p
-            style_6()
-            margin-left 21px
-            &>span
-              font-weight 700
+          style_6()
+          margin-left 21px
+          &>span
+            font-weight 700
         &_b
           width 164px
           height 51px
@@ -941,7 +958,7 @@ strong
     height 25px
     style_flex()
     justify-content center
-    margin-top 100px
+    margin-top 64px
     &>a
       width 155px
       style_flex()
@@ -995,7 +1012,6 @@ strong
   &_box_9
     width inherit
     height 317px
-    border 1px solid black
     margin-top 81px
     &>h2
       style_h2()
@@ -1018,7 +1034,6 @@ strong
     &_container
       max-width 1725px
       height inherit
-      //border 1px solid white
       margin 0 auto
       display flex
       flex-wrap wrap
@@ -1026,13 +1041,11 @@ strong
       &_box_1
         max-width 529px
         height inherit
-        //border 1px solid white
         display flex
         align-items center
         flex-wrap wrap
         &_content
           width inherit
-          //border 1px solid white
           border-right 1px solid #C4C4C4
           style_flex()
           flex-wrap wrap
@@ -1044,45 +1057,38 @@ strong
           &>img
             margin-right 58px
       &_box_2
-        width 525px
+        width 500px
         height inherit
-        //border 1px solid white
         style_flex()
-        border-right 1px solid #C4C4C4
         &_content
           width inherit
-          //border 1px solid white
           style_flex()
-          justify-content center
           flex-wrap wrap
           style_footer_1()
-          //padding 0 56px
           &>a
             style_footer_1()
             text-decoration none
-            margin-right 40px
+
       &_box_3
         max-width 666px
         height inherit
-        //border 1px solid white
-        display flex
-        align-items center
+        style_flex()
         justify-content center
         flex-wrap wrap
+        border-left 1px solid #C4C4C4
+        padding-left 45px
         &_content
           width inherit
           //border 1px solid white
           style_flex()
           flex-wrap wrap
           style_footer_1()
-          padding 0 45px
+
           &_logo
             style_flex()
-            //flex-wrap wrap
             max-width 332px
             height inherit
             margin-left 15px
-            //border 1px solid white
             &_box_1
               width 131px
               height 22px
@@ -1098,7 +1104,6 @@ strong
   &_container
     max-width 1725px
     height inherit
-    border 1px solid black
     border-top 1px solid #C4C4C4
     margin 0 auto
     style_flex()
@@ -1127,7 +1132,7 @@ strong
     letter-spacing 0.05em
 .hours
   strong()
-    color #2B2B2B
+  color #2B2B2B
 .footer_container_table_two
     width 300px
     display flex
